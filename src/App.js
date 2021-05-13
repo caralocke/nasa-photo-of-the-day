@@ -10,6 +10,12 @@ const StyledTop = styled.div`
   width: 60%;
   margin: 0 auto;
   font-family: 'Times New Roman', Times, serif;
+
+  transition: all 0.2s ease-in-out;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        color: hotpink;
+    }
 `
 
 function App() {

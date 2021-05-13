@@ -7,6 +7,12 @@ const StyledInfo = styled.div`
     width: 60%;
     margin: 0 auto;
     font-family: Arial;
+
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        color: hotpink;
+    }
 `
 
 export default function details(props) {
