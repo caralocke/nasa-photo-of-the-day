@@ -3,6 +3,7 @@ import axios from 'axios'
 import {BASE_URL, API_KEY} from './constants'
 import "./App.css";
 import Picture from './components/Picture'
+import Details from './components/Details'
 
 function App() {
   const [nasaData, setNasaData] = useState([])
@@ -16,8 +17,6 @@ function App() {
     .catch(function (error) {      
       console.log(error);
     })
-    return () => {     
-    }
   }, [])
 
   
@@ -26,6 +25,7 @@ function App() {
     <div className="App">
       <h1>NASA'S Picture of the Day</h1>
       <Picture key={nasaData.url} nasaData={nasaData}/>
+      <Details key={nasaData.explanation} nasaData={nasaData}/>
     </div>
   );
 }
