@@ -3,22 +3,22 @@ import {BASE_URL, API_KEY} from '../constants'
 import axios from 'axios'
 import styled from 'styled-components'
 
+const StyledInfo = styled.div`
+    width: 60%;
+    margin: 0 auto;
+    font-family: Arial;
+`
+
 export default function details(props) {
     const {nasaData} = props
-    // const [details, setDetails] = useState(null)
-
-    // useEffect(() => {
-    //     axios.get(`${BASE_URL}/?/${API_KEY}`)
-    //     .then (res => {setDetails(res.explanation)})
-    //     .catch (err => { debugger })
-    // }, [])
 
 
     return (
-        <div className='container'>
+        <StyledInfo>
             <h2>{nasaData.title}</h2>
             <h3>{nasaData.date}</h3>
+            <p>Image Credit: {nasaData.copyright}</p>            
             <p>{nasaData.explanation}</p>
-        </div>
+        </StyledInfo>
     )
 }

@@ -10,7 +10,7 @@ const StyledPicture = styled.div`
 export default function picture({nasaData}) {
     return (
         <StyledPicture>
-            <img src={nasaData.url}/>
+            <img src={nasaData.url} alt='astronomy for the day'/>
         </StyledPicture>
     )
 }
