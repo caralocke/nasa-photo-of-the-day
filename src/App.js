@@ -21,7 +21,7 @@ function App() {
   },[])
   return (
     <div className="App">
-      <h1>Astronomy Picture of the Day</h1>
+      <h1>{nasaData.title}</h1>
       <Date key={nasaData.date} nasaData={nasaData}/>
       <Picture key={nasaData.hdurl} nasaData={nasaData}/>
       <Details key={nasaData.explanation} nasaData={nasaData}/>
