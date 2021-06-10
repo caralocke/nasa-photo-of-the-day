@@ -8,7 +8,7 @@ import "./App.css";
 import styled from 'styled-components' 
 
 const StyledApp = styled.div `
-width: 80%;
+width: 100%;
 margin: 0 auto;
 display: flex;
 align-items:center;
@@ -16,9 +16,15 @@ flex-direction:column;
 justify-content:center;
 background-image:url(${`https://wallpaperaccess.com/full/977410.jpg`});
 background-size: cover;
+background-position: center;
 `
 const StyledH1 = styled.h1`
+  color:white;
 
+  &:hover {
+    transform: scale(1.5);
+    color: lightsalmon;
+  }
 `
 
 
@@ -38,7 +44,7 @@ function App() {
   },[])
   return (
     <StyledApp>
-      <h1>{nasaData.title}</h1>
+      <StyledH1>{nasaData.title}</StyledH1>
       <Date key={nasaData.date} nasaData={nasaData}/>
       <Picture key={nasaData.hdurl} nasaData={nasaData}/>
       <Details key={nasaData.explanation} nasaData={nasaData}/>

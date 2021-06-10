@@ -2,12 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledDetails = styled.div`
-    width: 800px;
+    width: 40%;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     color:white;
+    padding: 5%;
+
+    &:hover {
+        transform: scale(1.1);
+        color: pink;
+    }
     
 `
 
@@ -18,13 +24,22 @@ const Styledh4 = styled.h4 `
     transition: each 0.2s ease-in-out;
         &:hover {
         transition: each 0.2s ease-in-out;
-        color: blue;
+        color: lightskyblue;
+        transform: scale(1.5)
         }
 `
 
 const StyledExplanation = styled.p `
     line-height: 30px;
+    transform: scale(1.1);
     
+`
+
+const StyledCopyright = styled.p `
+    &:hover {
+        color: purple;
+        transform: scale(1.5);
+    }
 `
 
 export default function Details(props) {
@@ -33,7 +48,7 @@ export default function Details(props) {
         <StyledDetails>
             <Styledh4>Explanation: </Styledh4>
             <StyledExplanation>{nasaData.explanation}</StyledExplanation>
-            <p>Copyright: {nasaData.copyright}</p>
+            <StyledCopyright>Copyright: {nasaData.copyright}</StyledCopyright>
         </StyledDetails>
     )
 }
