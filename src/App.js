@@ -5,6 +5,17 @@ import Picture from './components/Picture'
 import Details from './components/Details'
 import Date from './components/Date'
 import "./App.css";
+import styled from 'styled-components' 
+
+const StyledApp = styled.div `
+width: 65%;
+margin: 0 auto;
+display: flex;
+align-items:center;
+flex-direction:column;
+justify-content:center;
+`
+
 
 function App() {
   const [nasaData, setNasaData] = useState([])
@@ -12,6 +23,7 @@ function App() {
     axios
     .get(`${BASE_URL}?api_key=${API_KEY}`)
     .then(res => {
+      console.log('res:\n', res)
       console.log('res.data:', res.data)
       setNasaData(res.data)
     })
@@ -20,12 +32,12 @@ function App() {
     })
   },[])
   return (
-    <div className="App">
+    <StyledApp>
       <h1>{nasaData.title}</h1>
       <Date key={nasaData.date} nasaData={nasaData}/>
       <Picture key={nasaData.hdurl} nasaData={nasaData}/>
       <Details key={nasaData.explanation} nasaData={nasaData}/>
-    </div>
+    </StyledApp>
   );
 }
 
