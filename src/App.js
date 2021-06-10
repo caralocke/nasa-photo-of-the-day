@@ -8,12 +8,17 @@ import "./App.css";
 import styled from 'styled-components' 
 
 const StyledApp = styled.div `
-width: 65%;
+width: 80%;
 margin: 0 auto;
 display: flex;
 align-items:center;
 flex-direction:column;
 justify-content:center;
+background-image:url(${`https://wallpaperaccess.com/full/977410.jpg`});
+background-size: cover;
+`
+const StyledH1 = styled.h1`
+
 `
 
 
