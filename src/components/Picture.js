@@ -7,7 +7,7 @@ const StyledImageContainer = styled.div`
 `
 
 const StyledPicture = styled.img`
-    width:40%;
+    width:50vh;
     margin: 20px;
     
     &:hover {

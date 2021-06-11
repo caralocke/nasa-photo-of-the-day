@@ -11,8 +11,7 @@ const StyledDetails = styled.div`
     padding: 5%;
 
     &:hover {
-        transform: scale(1.1);
-        color: pink;
+        transform: scale(1.1);        
     }
     
 `
@@ -30,8 +29,11 @@ const Styledh4 = styled.h4 `
 `
 
 const StyledExplanation = styled.p `
-    line-height: 30px;
-    transform: scale(1.1);
+    line-height: 35px;
+
+    &:hover {
+        color: pink;
+    }
     
 `
 
