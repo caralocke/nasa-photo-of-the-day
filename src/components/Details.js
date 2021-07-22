@@ -8,7 +8,7 @@ const StyledDetails = styled.div`
     align-items:center;
     justify-content:center;
     color:white;
-    padding: 5%;
+    padding: 1%;
 
     &:hover {
         transform: scale(1.1);        
