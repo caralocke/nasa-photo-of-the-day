@@ -23,7 +23,7 @@ const StyledH1 = styled.h1`
 
   &:hover {
     transform: scale(1.5);
-    color: lightsalmon;
+    color: hotpink;
   }
 `
 
